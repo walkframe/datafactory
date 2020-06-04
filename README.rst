@@ -1,3 +1,7 @@
+.. image:: https://github.com/walkframe/datafactory/workflows/master/badge.svg
+  :target: https://github.com/walkframe/datafactory/actions
+
+
 Requirements
 ============
 

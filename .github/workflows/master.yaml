@@ -1,0 +1,46 @@
+name: master
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+  
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: ['3.3', '3.5', '3.8']
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python
+        uses: actions/setup-python@v1.1.1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install tox
+      - run: tox -- -vv
+
+#  release:
+#    needs: test
+#    runs-on: ubuntu-latest
+#    name: pypi upload
+#    steps:
+#      - uses: actions/checkout@v1
+#      - name: Set up Python
+#        uses: actions/setup-python@v1.1.1
+#        with:
+#          python-version: 3.8
+#
+#      - name: Install requirements for upload.
+#        run: pip install -U setuptools wheel twine
+#
+#      - name: Build dists.
+#        run: ./setup.py sdist bdist_wheel
+#      
+#      - name: Upload dists.
+#        run: twine upload dist/* --non-interactive --skip-existing 
+#        env:
+#          TWINE_USERNAME: __token__
+#          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}

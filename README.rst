@@ -439,6 +439,6 @@ acceptable argument as datetime other than datetime type are following.
 history
 -------
 
-1.0.0
+1.0.x
 ~~~~~
 Initialize.

@@ -9,7 +9,7 @@ class ListContainer(BaseContainer, list):
     def __call__(self, iterable=None, callback=lambda v: v):
         """generate record to self(list container).
 
-        :param iterable: iterable object or int.element of in iterable-object basically does not affect rendering the record.
+        :param iterable: iterable object or int.
         :return: rendered container.
         """
         starttime = datetime.now()

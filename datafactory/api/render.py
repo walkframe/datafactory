@@ -14,7 +14,7 @@ def _initcontainer(obj):
 
 
 def apply(blueprint, args, args_suffix=[]):
-    """rendering arguments adjuster.
+    """Adjusts Rendering arguments.
 
     :param blueprint: field/model/container/function
     :param args: render arguments

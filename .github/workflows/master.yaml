@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: pip install tox
-      - run: tox -- -vv
+      - run: tox -e py -- -vv
 
 #  release:
 #    needs: test

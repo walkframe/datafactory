@@ -1,7 +1,7 @@
 Requirements
 ============
 
-- Python 3.3 or later.
+- Python 3.5 or later.
 
 
 Install

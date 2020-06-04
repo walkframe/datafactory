@@ -22,25 +22,25 @@ jobs:
       - run: pip install tox
       - run: tox -e py -- -vv
 
-#  release:
-#    needs: test
-#    runs-on: ubuntu-latest
-#    name: pypi upload
-#    steps:
-#      - uses: actions/checkout@v1
-#      - name: Set up Python
-#        uses: actions/setup-python@v1.1.1
-#        with:
-#          python-version: 3.8
-#
-#      - name: Install requirements for upload.
-#        run: pip install -U setuptools wheel twine
-#
-#      - name: Build dists.
-#        run: ./setup.py sdist bdist_wheel
-#      
-#      - name: Upload dists.
-#        run: twine upload dist/* --non-interactive --skip-existing 
-#        env:
-#          TWINE_USERNAME: __token__
-#          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    name: pypi upload
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python
+        uses: actions/setup-python@v1.1.1
+        with:
+          python-version: 3.8
+
+      - name: Install requirements for upload.
+        run: pip install -U setuptools wheel twine
+
+      - name: Build dists.
+        run: ./setup.py sdist bdist_wheel
+      
+      - name: Upload dists.
+        run: twine upload dist/* --non-interactive --skip-existing 
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}

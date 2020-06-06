@@ -13,6 +13,19 @@
 .. image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
   :target: https://opensource.org/licenses/Apache-2.0
 
+
+Overview
+===========
+`datafactory` makes **flexible** data according to the given rules.
+
+The features are divided into `field`, `model`, `container`, and `formatter`.
+If you compare it to a DB, fields are columns, models are records, and containers are tables.
+
+The great thing about the `datafactory` is its flexibility in type specification. 
+Containers can also be nested.
+
+`formatter` supports data formatting and file output.
+
 Requirements
 ============
 
@@ -121,7 +134,7 @@ TSV Example
 
 Custom Example
 --------------
-if object is callable, it stores execution result.
+If object is callable, it stores execution result.
 
 Model
 ~~~~~
@@ -195,7 +208,7 @@ Limited number of element Example
 Combination Example
 -------------------
 To generate the testdata that combines multiple elements
-can be achieved by using the repeat-argument of CycleField and SequenceField.
+can be achieved by using the repeat-argument of `CycleField` and `SequenceField`.
 
 .. code-block:: python3
 
@@ -426,10 +439,12 @@ common
 
 **noise**
 
-possible to specify the gap between the actual time as noise parameters.
+It is possible to specify the gap between the actual time as noise parameters.
 allow to specify the noise parameters are “datetimes.generator” and “datetimes.range” functions.
-noise-arguments must be specified in the kwargs format. and not required.
-the available keys are same with timedelta-args. specifically, it is the following.
+
+`**noise` is specified in the kwargs format and they are not required.
+
+The available keys are same with timedelta-args.
 
 - days
 - hours
@@ -439,13 +454,13 @@ the available keys are same with timedelta-args. specifically, it is the followi
 
 **argtype**
 
-acceptable argument as datetime other than datetime type are following.
+The acceptable arguments as the other than datetime type are the following.
 
-:int: it is processed as year.
-:str or unicode: create datetime object in the numeric part of string.
-:tuple: it is processed as (year, month, day)
-:dict: these items are processed as datetime arguments.
-:date: hour:minute:second is complemented with 00:00:00.
+:int: It is evaluated as a `year`.
+:str: It is parsed as `datetime` from the numeric part of the string.
+:tuple: It will be passed into `datetime` args.
+:dict: It will be passed into `datetime` kwargs.
+:date: It will be converted `datetime` type.
 
 history
 -------

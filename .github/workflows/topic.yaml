@@ -18,4 +18,6 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: pip install tox
-      - run: tox -e py -- -vv
+      - run: tox -e py -e cov -e codecov -- -vv
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

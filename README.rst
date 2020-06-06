@@ -1,6 +1,12 @@
 .. image:: https://github.com/walkframe/datafactory/workflows/master/badge.svg
   :target: https://github.com/walkframe/datafactory/actions
 
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+  :target: https://github.com/python/black
+
+.. image:: https://codecov.io/gh/walkframe/datafactory/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/walkframe/datafactory
+  
 
 Requirements
 ============

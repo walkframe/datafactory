@@ -1,3 +1,6 @@
+.. image:: https://badge.fury.io/py/datafactory.svg
+  :target: https://badge.fury.io/py/datafactory
+
 .. image:: https://github.com/walkframe/datafactory/workflows/master/badge.svg
   :target: https://github.com/walkframe/datafactory/actions
 
@@ -6,7 +9,9 @@
 
 .. image:: https://codecov.io/gh/walkframe/datafactory/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/walkframe/datafactory
-  
+
+.. image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
+  :target: https://opensource.org/licenses/Apache-2.0
 
 Requirements
 ============

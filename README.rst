@@ -285,6 +285,9 @@ nested example
   {'a': ['b', 'd'], 'h': {0: 0, 1: 2, 2: 4, 3: 6, 4: 8}},
   {'a': ['c', 'e'], 'h': {0: 0, 1: 2, 2: 4, 3: 6, 4: 8}}]
 
+- `b` and `c` appear at first of a list in `a` key alternatively.
+- `d` and `e` appear at second of a list in `a` key alternatively.
+
 datetime Utility
 ----------------
 
